@@ -1,23 +1,33 @@
-body{
-background-color: #F8F8F8;
+body {
+    background-color: #F8F8F8;
 }
-.nav-text{
-    color:#F3B80A;
+
+.nav-text {
+    color: #F3B80A;
     font-size: 14px;
 }
 
-.nav-text:hover, .nav-item-li:hover{
-    color:#a1f30a;
+.nav-text:hover,
+.nav-item-li:hover {
+    color: #a1f30a;
 }
 
-.nav-item-li{
-    font-family: 'Segoe UI','Segoe UI Regular',Regular;
+.nav-item-li {
+    font-family: 'Segoe UI', 'Segoe UI Regular', Regular;
     font-size: 20px;
     color: #fff;
 }
 
-.font-custom{
+.font-custom {
     color: #707070;
-     font-family: 'Segoe UI';
+    font-family: 'Segoe UI';
 }
 
+mapml-viewer:defined {
+    background-color: black;
+    /* custom background color */
+    border: none;
+    /* remove default border */
+    max-width: 100%;
+    /* responsive map */
+}
