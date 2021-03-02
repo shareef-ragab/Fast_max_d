@@ -23,11 +23,11 @@ body {
     font-family: 'Segoe UI';
 }
 
-mapml-viewer:defined {
-    background-color: black;
-    /* custom background color */
-    border: none;
-    /* remove default border */
-    max-width: 100%;
-    /* responsive map */
+.btn-back-hover:hover {
+    background-color: #F3B80A;
+}
+
+.input-text-custom {
+    background: #F1F1F1;
+    color: #BCBCBC;
 }
