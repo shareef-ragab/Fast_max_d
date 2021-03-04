@@ -7,11 +7,6 @@ body {
     font-size: 14px;
 }
 
-.nav-text:hover,
-.nav-item-li:hover {
-    color: #a1f30a;
-}
-
 .nav-item-li {
     font-family: 'Segoe UI', 'Segoe UI Regular', Regular;
     font-size: 20px;
@@ -48,6 +43,8 @@ body {
 
 a:hover,
 .nav-link :hover,
-.nav-text-user:hover {
+.nav-text-user:hover,
+.nav-text:hover,
+.nav-item-li:hover {
     color: #C49035;
 }
