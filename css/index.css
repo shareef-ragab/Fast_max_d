@@ -31,3 +31,23 @@ body {
     background: #F1F1F1;
     color: #BCBCBC;
 }
+
+.list-group-item.list-group-item-action {
+    color: #919191;
+    border: 0px;
+}
+
+.list-group-item.list-group-item-action:hover,
+.list-group-item.list-group-item-action.active {
+    background-color: #FFE188;
+}
+
+.nav-text-user {
+    color: #fff;
+}
+
+a:hover,
+.nav-link :hover,
+.nav-text-user:hover {
+    color: #C49035;
+}
