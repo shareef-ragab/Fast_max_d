@@ -48,3 +48,9 @@ a:hover,
 .nav-item-li:hover {
     color: #C49035;
 }
+
+.dropdown-menu-center {
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0) !important;
+}
