@@ -11,60 +11,72 @@
     <script src="https://kit.fontawesome.com/b743b298fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="css/dashboard.css" rel="stylesheet">
+
     <title>Fast max</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg " style="background-color: #F3B80A; ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="" width="100" height="50" class="d-inline-block align-top">
+
+    <header class="navbar navbar-expand-lg sticky-top flex-md-nowrap p-0" style="background-color: #F3B80A; ">
+        <div class="container-fluid ms-3" style=" background-image: url('img//nav_back.png');">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 " href="# ">
+                <img src="img/nav-logo.png" alt=" " width="100 " height="50 " class="d-inline-block align-top ">
             </a>
-
-            <ul class="navbar-nav mb-2 mb-lg-0 d-flex me-5">
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav px-3">
                 <li class="nav-item dropdown">
-                    <a class="nav-link  mt-2" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;">
-                        <i class="fa fa-bell" aria-hidden="true"></i>
-
+                    <a class="nav-link mt-2 " href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
+                        <i class="fa fa-bell " aria-hidden="true "></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-center" style="width: 300px;" data-bs-toggle="notificationDropdown" aria-expanded="true">
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <span class="fw-bold" style="color: green;font-size: 16px;"><i class="fa fa-send me-2" aria-hidden="true"></i>تم التسليم</span>
-                                <p class="text-muted mt-3" style="font-size: 12px;">تم دفع المبلغ وهو 15 ريال في تاريخ</p>
-                                <p class="text-muted" style="font-size: 10px;"> 15-12-2021</p>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li>
-                            <a class="dropdown-item text-center text-muted" style="font-size: 12px;" href="#">إظهار الكل</a>
-                        </li>
+                    <ul class="dropdown-menu dropdown-menu-center" style="width: 300px; " data-bs-toggle="dropdown" aria-expanded="true ">
+                        <div class="dropdown-header d-flex flex-column align-items-center">
+                            <div class="info text-center ">
+                                <p class="fw-bold mb-0 ">الإشعارات</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-body " aria-labelledby="navbarDropdown ">
+                            <ul class="navbar-nav ">
+                                <li>
+                                    <a class="dropdown-item " href="# ">
+                                        <span class="fw-bold " style="color: green;font-size: 16px; "><i class="fa fa-send me-2 " aria-hidden="true "></i>تم التسليم</span>
+                                        <p class="text-muted mt-3 " style="font-size: 12px; ">تم دفع المبلغ وهو 15 ريال في تاريخ</p>
+                                        <p class="text-muted " style="font-size: 10px; "> 15-12-2021</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider ">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-center text-muted " style="font-size: 12px; " href="# ">إظهار الكل</a>
+                                </li>
+                            </ul>
+                        </div>
                     </ul>
-
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-text-user nav-link  fw-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-text-user nav-link  fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         محمد بن زايد <img class="rounded-circle h-25 w-25" src="https://ui-avatars.com/api/?name=shareef">
                     </a>
-                    <ul class="dropdown-menu" id="navbarDropdown" ata-bs-toggle="dropdown" aria-expanded="true">
+                    <ul class="dropdown-menu dropdown-menu-center " ata-bs-toggle="dropdown" aria-expanded="true">
                         <div class="dropdown-header d-flex flex-column align-items-center">
                             <div class="figure mb-3">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                         <img class="img-profile rounded-circle" src="https://ui-avatars.com/api/?name=s">
                                     </span>
                             </div>
-                            <div class="info text-center">
-                                <p class="fw-bold mb-0">محمد بين زايد</p>
-                                <p class="text-muted mb-3">mohammed@gmail.com</p>
+                            <div class="info text-center ">
+                                <p class="fw-bold mb-0 ">محمد بين زايد</p>
+                                <p class="text-muted mb-3 ">mohammed@gmail.com</p>
                             </div>
                         </div>
-                        <div class="dropdown-body" aria-labelledby="navbarDropdown">
-                            <ul class="navbar-nav p-0 pt-3">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link font-custom">
-                                        <i class="fa fa-key me-1 p-2" aria-hidden="true"></i>
+                        <div class="dropdown-body " aria-labelledby="navbarDropdown ">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item " style="font-size: 14px ">
+                                    <a href="# " class="nav-link font-custom ">
+                                        <i class="fa fa-key me-1 ms-1 " aria-hidden="true "></i>
                                         <span>تسجيل خروج</span>
                                     </a>
                                 </li>
@@ -74,37 +86,67 @@
                 </li>
             </ul>
         </div>
-        </div>
-    </nav>
-    <div class="col-10 list-group list-group-horizontal shadow-sm mb-5 position-absolute mt-3 p-1" style="margin-right: 8%;">
-        <a href="#" class="fw-bold font-custom nav-link" style="font-size: 14px;">
-            العنوان
-        </a>
-    </div>
-    <div class="list-group col-1 ms-3 mt-3 shadow-sm mb-5" style="width: 3.5%;">
-        <a href="#" class="list-group-item list-group-item-action ">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action mt-3 active" aria-current="true">
-            <i class="fa fa-align-justify" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <i class="fa fa-home" aria-hidden="true"></i></a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <i class="fa fa-user" aria-hidden="true"></i></a>
-        <a href="#" class="list-group-item list-group-item-action">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action mb-4">
-            <i class="fa fa-file" aria-hidden="true"></i>
-        </a>
-    </div>
-
-
+    </header>
     <div class="container-fluid ">
-
+        <div class="row ">
+            <nav id="sidebarMenu " class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse " style="width: 5.4%; ">
+                <div class="position-sticky pt-3 shadow-sm ">
+                    <ul class=" nav flex-column ">
+                        <li class="nav-item ">
+                            <a href="# " class="list-group-item list-group-item-action ">
+                                <i class="fa fa-arrow-right " aria-hidden="true "></i>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="# " class="list-group-item list-group-item-action mt-3 active " aria-current="true ">
+                                <i class="fa fa-align-justify " aria-hidden="true "></i>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="# " class="list-group-item list-group-item-action ">
+                                <i class="fa fa-home " aria-hidden="true "></i></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="# " class="list-group-item list-group-item-action ">
+                                <i class="fa fa-user " aria-hidden="true "></i></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="# " class="list-group-item list-group-item-action ">
+                                <i class="fa fa-map-marker " aria-hidden="true "></i>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="# " class="list-group-item list-group-item-action mb-4 ">
+                                <i class="fa fa-file " aria-hidden="true "></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
-    <footer class="footer mt-auto py-4 position-relative h-100" style="background-color: #F3B80A; ">
+    <main class="col-md-10 ms-sm-auto col-lg-11 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-3 me-2 ms-2 mt-3 ps-3 pe-3 shadow-sm" style="top: 11%;">
+            <h1 class="h4 ms-4"> العنوان</h1>
+            <!--
+            <div class="btn-toolbar mb-2 mb-md-0 ">
+                <div class="btn-group me-2 ">
+                    <button type="button " class="btn btn-sm btn-outline-secondary ">Export</button>
+                </div>
+
+            </div>
+            -->
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="img/user-ex.png" class="card-img-top h-75" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-4 position-relative h-100 " style="background-color: #F3B80A; ">
         <div class="position-absolute bottom-0 start-0 ms-5 mb-3 ">
             <span class="text-white fw-bold ">جميع الحقوق محفوظة</span>
         </div>
