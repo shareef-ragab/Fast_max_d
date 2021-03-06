@@ -37,23 +37,17 @@
                                 <p class="fw-bold mb-0 ">الإشعارات</p>
                             </div>
                         </div>
-                        <div class="dropdown-body " aria-labelledby="navbarDropdown ">
-                            <ul class="navbar-nav ">
-                                <li>
-                                    <a class="dropdown-item " href="# ">
-                                        <span class="fw-bold " style="color: green;font-size: 16px; "><i
+                        <div class="dropdown-body">
+                            <a class="dropdown-item " href="# ">
+                                <span class="fw-bold " style="color: green;font-size: 16px; "><i
                                                 class="fa fa-send me-2 " aria-hidden="true "></i>تم التسليم</span>
-                                        <p class="text-muted mt-3 " style="font-size: 12px; ">تم دفع المبلغ وهو 15 ريال في تاريخ</p>
-                                        <p class="text-muted " style="font-size: 10px; "> 15-12-2021</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider ">
-                                </li>
-                                <li>
-                                    <a class="dropdown-item text-center text-muted " style="font-size: 12px; " href="# ">إظهار الكل</a>
-                                </li>
-                            </ul>
+                                <p class="text-muted mt-3 " style="font-size: 12px; ">تم دفع المبلغ وهو 15 ريال في تاريخ</p>
+                                <p class="text-muted " style="font-size: 10px; "> 15-12-2021</p>
+                            </a>
+                            <hr class="dropdown-divider ">
+                        </div>
+                        <div class="text-center ">
+                            <a class="text-muted nav-link" style="font-size: 12px; " href="# ">إظهار الكل</a>
                         </div>
                     </ul>
                 </li>
@@ -127,7 +121,7 @@
             </nav>
         </div>
     </div>
-    <main class="col-md-10 ms-sm-auto col-lg-11 px-md-4">
+    <main class="col-md-10 ms-sm-auto col-lg-11 px-md-5">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-3 me-2 ms-2 mt-3 ps-3 pe-3 shadow-sm" style="top: 11%;">
             <h1 class="h4 ms-4"> العنوان</h1>
             <!--
@@ -139,9 +133,9 @@
             </div>
             -->
         </div>
-        <div class="row row-cols-6 mt-2 mb-5 ms-2" style="max-height: 50%;">
-            <div class="card h-25 col-2">
-                <img src="img/user-ex.png" class="card-img-top w-100 h-25" alt="...">
+        <div class="row row-cols-6 g-2 mt-2 mb-5 ms-2" style="max-height: 50%;">
+            <div class="card h-25 col-2 shadow-sm">
+                <img src="img/user-ex.png" class="card-img-top w-75 h-25 mt-3 mx-auto" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center title-custom">Fast Max</h5>
                     <p class="card-text text-center font-custom mt-1" style="font-size: 10px;"> الحساب مفعل</p>
@@ -150,19 +144,73 @@
                     <p class="card-text text-start font-custom mt-2" style="font-size: 10px;"><i class="fa fa-calendar me-1" aria-hidden="true"></i> 15-10-1999</p>
                 </div>
             </div>
+            <div class="card h-25 col-2 ms-2 me-2 shadow-sm ps-2 pe-2">
+                <canvas class="my-4 w-100" id="myChart" width="100" height="163"></canvas>
+            </div>
+            <ul class="list-group col-5 shadow-sm">
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                    </div>
+                    <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                    </div>
+                    <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                    </div>
+                    <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                    </div>
+                    <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                    </div>
+                    <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                    </div>
+                    <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
+                </li>
+            </ul>
+            <div class="card h-25 col-2 shadow-sm ">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
 
-        </div>
-        <div class="row row-cols-6 mt-2 mb-5 ms-2" style="max-height: 50%;">
-            <div class="card h-25" style="max-width: 160px;">
-                <img src="img/user-ex.png" class="card-img-top w-100 h-25" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title text-center title-custom">Fast Max</h5>
-                    <p class="card-text text-center font-custom mt-1" style="font-size: 10px;"> الحساب مفعل</p>
-                    <p class="card-text text-start font-custom mt-2" style="font-size: 10px;"><i class="fa fa-phone me-1" aria-hidden="true"></i>4582218632</p>
-                    <p class="card-text text-start font-custom mt-2" style="font-size: 10px;"><i class="fa fa-map-marker me-1" aria-hidden="true"></i> السعودية</p>
-                    <p class="card-text text-start font-custom mt-2" style="font-size: 10px;"><i class="fa fa-calendar me-1" aria-hidden="true"></i> 15-10-1999</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+        </div>
+        <div class=" row row-cols-6 mt-2 mb-5 ms-2 " style="max-height: 50%; ">
 
         </div>
     </main>
@@ -174,11 +222,65 @@
             <span class="text-white fw-bold ">2021</span>
         </div>
     </footer>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArKbcgnCCb0sZNd3zUq0wZCIWzapPqrRk&callback=initMap ">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js " integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js "></script>
+    <script>
+        var config = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        5,
+                        2,
+                    ],
+                    backgroundColor: [
+                        '#F3B80A',
+                        '#D1D1D1',
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'اجمالي الطلبات',
+                    'لدى المندوب',
+                ],
+
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    rtl: true,
+                    labels: {
+                        textDirection: 'center',
+                        fontColor: '#707070',
+                        usePointStyle: true,
+
+                    },
+                },
+                title: {
+                    display: true,
+                    text: " إحصائيات الطلبات لديه من المجموع "
+                }
+            }
+        };
+
+        window.onload =
+            function() {
+                var ctx = document.getElementById('myChart').getContext('2d');
+                window.myPie = new Chart(ctx, config);
+            };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js " integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js " integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi " crossorigin="anonymous ">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js " integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG " crossorigin="anonymous "></script>
 </body>
+
+</html>
+
+</html>
+
+</html>
 
 </html>
 
