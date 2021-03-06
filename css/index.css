@@ -74,3 +74,11 @@ a:hover,
     color: #fff;
     text-align: center;
 }
+
+.rotate-180 {
+    transform: rotate(-180deg);
+}
+
+.form-check-input:checked {
+    background-color: #F3B80A;
+}
