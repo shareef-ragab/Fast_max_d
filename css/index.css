@@ -59,3 +59,18 @@ a:hover,
     font-size: 18px;
     color: #F3B80A;
 }
+
+.item-list-custom {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0.1%;
+    border-bottom-color: #7070702d;
+}
+
+.card-custom-dash {
+    font-size: 12px;
+    background-color: #F3B80A;
+    color: #fff;
+    text-align: center;
+}

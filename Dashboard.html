@@ -133,8 +133,8 @@
             </div>
             -->
         </div>
-        <div class="row row-cols-6 g-2 mt-2 mb-5 ms-2" style="max-height: 50%;">
-            <div class="card h-25 col-2 shadow-sm">
+        <div class="row row-cols-4 g-1 mt-2 mb-3 ms-2" style="max-height: 50%;">
+            <div class="card h-25 col col-2 shadow-sm">
                 <img src="img/user-ex.png" class="card-img-top w-75 h-25 mt-3 mx-auto" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center title-custom">Fast Max</h5>
@@ -144,65 +144,83 @@
                     <p class="card-text text-start font-custom mt-2" style="font-size: 10px;"><i class="fa fa-calendar me-1" aria-hidden="true"></i> 15-10-1999</p>
                 </div>
             </div>
-            <div class="card h-25 col-2 ms-2 me-2 shadow-sm ps-2 pe-2">
-                <canvas class="my-4 w-100" id="myChart" width="100" height="163"></canvas>
+            <div class="card col col-2 ms-2 me-2 shadow-sm ps-3 pe-2 pb-3" style="width: 22%; max-height:340px;">
+                <canvas class="my-4" id="myChartAllOrder" width="100" height="100"></canvas>
             </div>
-            <ul class="list-group col-5 shadow-sm">
-                <li class="list-group-item d-flex justify-content-between">
+            <ul class="list-group col col-4 shadow-sm pt-3 pb-3 bg-light">
+                <li class="list-group-item d-flex justify-content-between item-list-custom">
                     <div>
                         <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
                         <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
                     </div>
                     <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item d-flex justify-content-between item-list-custom">
                     <div>
-                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
-                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                        <img src="img/ic_car.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات لديه في الطريق  </span>
                     </div>
                     <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item d-flex justify-content-between item-list-custom">
                     <div>
-                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
-                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                        <img src="img/done.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2"> طلبات تم تسليمها</span>
                     </div>
                     <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item d-flex justify-content-between item-list-custom">
                     <div>
-                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
-                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                        <img src="img/ic_repeat.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2">طلبات تم ارجاعها جزئيا  </span>
                     </div>
                     <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item d-flex justify-content-between item-list-custom">
                     <div>
-                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
-                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                        <img src="img/circle.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2">طلبات تم ارجاعها كليا  </span>
                     </div>
                     <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item d-flex justify-content-between item-list-custom">
                     <div>
-                        <img src="img/ic_home.png" class="img-fluid" width="25" height="25" />
-                        <span class="font-custom ms-2"> طلبات لديه في المخزن </span>
+                        <img src="img/cancel.png" class="img-fluid" width="25" height="25" />
+                        <span class="font-custom ms-2">طلبات تم الغائها </span>
                     </div>
                     <span class="badge rounded-pill font-custom fw-bold" style="font-size: 16px;">8</span>
                 </li>
             </ul>
-            <div class="card h-25 col-2 shadow-sm ">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-
+            <div class="card h-25 col col-3 shadow-sm ms-3">
+                <div class="card-header font-custom border-0 text-center" style="font-size: 15px;">
+                    الاحصائيات
+                </div>
+                <div class="m-2 mb-5">
+                    <div class="row h-50 mt-4 ms-3 me-3">
+                        <div class="card me-2 card-custom-dash" style="max-height: 100px; width: 46%;">
+                            <div class="card-body p-2 pt-4 pb-4">
+                                <p class="card-text fw-bold">مجموع الطلبات</p>
+                                <p class="card-text fw-bold">500</p>
+                            </div>
+                        </div>
+                        <div class="card ms-2 card-custom-dash" style="max-height: 100px; width:46%;">
+                            <div class="card-body p-2 pt-4 pb-4">
+                                <p class="card-text fw-bold">ثمن توصيل الطلب</p>
+                                <p class="card-text fw-bold">500</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
+                    <div class="row h-50 mt-3 ms-3 me-3">
+                        <div class="card col me-2 card-custom-dash" style="max-height: 100px; width: 46%;">
+                            <div class="card-body p-2pt-4 pb-4">
+                                <p class="card-text fw-bold">مستحقاته المالية</p>
+                                <p class="card-text fw-bold">500</p>
+                            </div>
+                        </div>
+                        <div class="card col ms-2 card-custom-dash" style="max-height: 100px; width: 46%;">
+                            <div class="card-body p-2 pt-4 pb-4">
+                                <p class="card-text fw-bold">عدد مرات الدفع</p>
+                                <p class="card-text fw-bold">500</p>
                             </div>
                         </div>
                     </div>
@@ -210,11 +228,16 @@
 
             </div>
         </div>
-        <div class=" row row-cols-6 mt-2 mb-5 ms-2 " style="max-height: 50%; ">
-
+        <div class="row row-cols-2 mb-5 ms-2" style="max-height: 50%;">
+            <div class="card col col-4 me-2 shadow-sm ps-3 pe-2 pb-3" style="max-height: 350px;">
+                <canvas class="my-4 w-100" id="myChartOrderDone" width="200" height="160"></canvas>
+            </div>
+            <div class="card col col-7 me-2 shadow-sm ps-3 pe-2 pb-3" style="max-height: 350px; width: 740px;">
+                <canvas class="my-4 w-100 h-100 p-2" id="myChartProfit" width="300" height="150"></canvas>
+            </div>
         </div>
     </main>
-    <footer class="footer mt-auto py-4 position-relative h-100 " style="background-color: #F3B80A; ">
+    <footer class="footer py-4 position-relative h-100 fixed-bottom" style="background-color: #F3B80A; margin-top: 11%;">
         <div class="position-absolute bottom-0 start-0 ms-5 mb-3 ">
             <span class="text-white fw-bold ">جميع الحقوق محفوظة</span>
         </div>
@@ -264,26 +287,81 @@
                 }
             }
         };
+        var configOrderDone = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        5,
+                        2,
+                    ],
+                    backgroundColor: [
+                        '#F3B80A',
+                        '#D1D1D1',
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'الطلبات لم تصل',
+                    'الطلبات الواصلة',
+                ],
 
-        window.onload =
-            function() {
-                var ctx = document.getElementById('myChart').getContext('2d');
-                window.myPie = new Chart(ctx, config);
-            };
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    rtl: true,
+                    labels: {
+                        textDirection: 'center',
+                        fontColor: '#707070',
+                        usePointStyle: true,
+
+                    },
+                },
+                title: {
+                    display: true,
+                    text: "احصائيات الطلبات الواصلة"
+                }
+            }
+        };
+        var configProfit = {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'الأرباح',
+                    backgroundColor: '#F3B80A',
+                    data: [
+                        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+                    ],
+
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'اجمالي الأرباح الشهرية'
+                },
+                legend: {
+                    position: 'top',
+                }
+            }
+        };
+        window.onload = function() {
+            var ctxAllOrder = document.getElementById('myChartAllOrder').getContext('2d');
+            window.myPie = new Chart(ctxAllOrder, config);
+            var ctxOrderDone = document.getElementById('myChartOrderDone').getContext('2d');
+            window.myPie = new Chart(ctxOrderDone, configOrderDone);
+            var ctxProfit = document.getElementById('myChartProfit').getContext('2d');
+            window.myPie = new Chart(ctxProfit, configProfit);
+        };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js " integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi " crossorigin="anonymous ">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js " integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG " crossorigin="anonymous "></script>
 </body>
-
-</html>
-
-</html>
-
-</html>
-
-</html>
-
-</html>
 
 </html>
