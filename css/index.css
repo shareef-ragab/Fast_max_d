@@ -42,10 +42,11 @@ body {
 }
 
 a:hover,
-.nav-link :hover,
+.nav-link:hover,
 .nav-text-user:hover,
 .nav-text:hover,
-.nav-item-li:hover {
+.nav-item-li:hover,
+.item-man:hover {
     color: #C49035;
 }
 
@@ -81,4 +82,12 @@ a:hover,
 
 .form-check-input:checked {
     background-color: #F3B80A;
+}
+
+.nav-link.list-group-item {
+    background-color: #F3B80A;
+}
+
+.nav-link.list-group-item:hover {
+    background-color: #C49035;
 }
