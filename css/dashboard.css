@@ -50,3 +50,22 @@ body {
     font-size: .75rem;
     text-transform: uppercase;
 }
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 11%;
+    right: 5.8%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #F3B80A;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #C49035;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: #C49035;
+}
