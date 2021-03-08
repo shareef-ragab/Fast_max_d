@@ -46,7 +46,9 @@ a:hover,
 .nav-text-user:hover,
 .nav-text:hover,
 .nav-item-li:hover,
-.item-man:hover {
+.item-man:hover,
+.modal-btn-done:hover,
+.modal-btn-close:hover {
     color: #C49035;
 }
 
@@ -90,4 +92,16 @@ a:hover,
 
 .nav-link.list-group-item:hover {
     background-color: #C49035;
+}
+
+.modal-btn-done {
+    color: #fff;
+    font-size: 12px;
+    background-color: #F3B80A;
+}
+
+.modal-btn-close {
+    color: #fff;
+    font-size: 12px;
+    background-color: #707070;
 }
