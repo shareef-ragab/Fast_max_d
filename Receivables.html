@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b743b298fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <title>Fast max</title>
+
+    <!-- modal logut-->
+    <div class="modal fade" id="logoutmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title font-custom fw-bold" id="exampleModalLabel" style="font-size: 18px">هل تريد
+                        الخروج</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="text-start font-custom" style="font-size: 14px"> هل تريد الإستمرار في تسجيل الخروج
+                    </span>
+                    <form>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i
+                            class="fa fa-key me-2 ms-1" aria-hidden="true"></i>تسجيل الخروج</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2"
+                        data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal edit info user-->
+    <div class="modal fade" id="edit-usermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center col-11 border-bottom-0">
+                    <span class="modal-title font-custom fw-bolder col-11 ms-4" id="exampleModalLabel"
+                        style="font-size: 18px;">بيانات المستخدم</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="ms-5 me-5 g-3">
+                        <a class="nav-text-user nav-link  fw-bold col-9" style="margin-left: 40%;margin-right: 40%;"
+                            href="#">
+                            <div class="profile-item">
+                                <img class="rounded-circle h-25 w-25 img-profile"
+                                    src="https://ui-avatars.com/api/?name=shareef">
+                                <div class="text-center d-flex flex-column align-items-center pt-5 img-profile-change">
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="mb-2 input-group mb-3 mt-3">
+                            <span class="col-1 input-group-text border-0 input-text-custom"><i class="fa fa-user fs-12"
+                                    aria-hidden="true"></i></span>
+                            <input name="f_name" type="text" class="form-control border-0 input-text-custom me-2 fs-12"
+                                aria-label="First name" placeholder="الإسم الأول">
+                            <span class="col-1 input-group-text border-0 input-text-custom"><i class="fa fa-user fs-12"
+                                    aria-hidden="true"></i></span>
+                            <input name="l_name" type="text" class="form-control border-0  input-text-custom fs-12"
+                                aria-label="Last name" placeholder="الإسم الأخير">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="datebirth_ic"><i
+                                    class="fa fa-calendar-times-o" aria-hidden="true"></i></span>
+                            <input type="date" class="form-control border-0 input-text-custom fs-12" id="datebirth"
+                                aria-describedby="datebirth_ic">
+                        </div>
+                        <div class="form-check form-check-inline me-5" style="margin-right: 20%;">
+                            <input class="form-check-input fs-12" type="radio" name="inlineRadioOptions"
+                                id="inlineRadio1" value="female">
+                            <label class="form-check-label fs-12 font-custom" for="inlineRadio1">الإنثى</label>
+                        </div>
+                        <div class="form-check form-check-inline ms-5 mx-auto">
+                            <input class="form-check-input fs-12" type="radio" name="inlineRadioOptions"
+                                id="inlineRadio2" value="male">
+                            <label class="form-check-label fs-12 font-custom" for="inlineRadio2">ذكر</label>
+                        </div>
+                        <div class="input-group row row-cols-3 mb-3 mb-3 mt-3 ms-1 me-1">
+                            <input type="text" readonly
+                                class="form-control input-text-custom  border-1 fs-12 font-custom" id="inputCuntry"
+                                value="السعودية">
+                            <select id="inputCity" class="form-select border-1 input-text-custom fs-12 col-5 ms-2 me-2">
+                                <option selected>المدينة</option>
+                                <option>...</option>
+                            </select>
+                            <input type="text" class="form-control border-1 input-text-custom fs-12" id="inputZip"
+                                placeholder="zip code">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3  mt-3">
+                            <textarea class="form-control  border-1 input-text-custom fs-12"
+                                id="exampleFormControlTextarea1" rows="3" placeholder="العنوان"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i
+                            class="fa fa-save me-2 ms-1" aria-hidden="true"></i>حفظ</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2"
+                        data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal edit user contact-->
+    <div class="modal fade" id="edit-user-contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center col-11 border-bottom-0">
+                    <span class="modal-title font-custom fw-bolder col-11 ms-4" id="exampleModalLabel"
+                        style="font-size: 18px;">بيانات التواصل</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="ms-5 me-5">
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="email_ic">
+                                <i class="fa fa-google" aria-hidden="true"></i></span>
+                            <input type="email" class="form-control border-0 input-text-custom fs-12" id="email"
+                                aria-describedby="email_ic" placeholder="exsample@gmail.com">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="mobile_ic">
+                                <i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control border-0 input-text-custom fs-12" id="mobile"
+                                aria-describedby="mobile_ic" placeholder="رقم الهاتف">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i
+                            class="fa fa-save me-2 ms-1" aria-hidden="true"></i>حفظ</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2"
+                        data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal edit password-->
+    <div class="modal fade" id="edit-password-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center col-11 border-bottom-0">
+                    <span class="modal-title font-custom fw-bolder col-11 ms-4" id="exampleModalLabel"
+                        style="font-size: 18px;">كلمة المرور</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="ms-5 me-5">
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="oldpass_ic"><i
+                                    class="fa fa-lock" aria-hidden="true"></i></i></span>
+                            <input type="password" class="form-control border-0 input-text-custom fs-12"
+                                id="exampleInputPassword" placeholder="كلمة المرور" aria-describedby="pass_ic">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="pass_ic1"><i
+                                    class="fa fa-lock" aria-hidden="true"></i></i></span>
+                            <input type="password" class="form-control border-0 input-text-custom fs-12"
+                                id="exampleInputPassword1" placeholder="كلمة المرور الجديدة"
+                                aria-describedby="pass_ic1">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="pass_ic2"><i
+                                    class="fa fa-lock" aria-hidden="true"></i></i></span>
+                            <input type="password" class="form-control border-0 input-text-custom fs-12"
+                                id="exampleInputPassword2" placeholder=" تأكيد كلمة المرور الجديدة"
+                                aria-describedby="pass_ic2">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i
+                            class="fa fa-save me-2 ms-1" aria-hidden="true"></i>حفظ</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2"
+                        data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal edit bank-->
+    <div class="modal fade" id="edit-bank-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center col-11 border-bottom-0">
+                    <span class="modal-title font-custom fw-bolder col-11 ms-4" id="exampleModalLabel"
+                        style="font-size: 18px;">بيانات الحساب التجاري</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="ms-5 me-5">
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="number_account">
+                                <i class="fa fa-bank" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control border-0 input-text-custom fs-12" id="number_account"
+                                aria-describedby="number_account_ic" placeholder="رقم الحساب البنكي">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="Number_IBN_ic">
+                                <i class="fa fa-bank" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control border-0 input-text-custom fs-12" id="Number_IBN"
+                                aria-describedby="Number_IBN_ic" placeholder="Number IBN">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i
+                            class="fa fa-save me-2 ms-1" aria-hidden="true"></i>حفظ</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2"
+                        data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal add repository-->
+    <div class="modal fade" id="add-repository-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center col-11 border-bottom-0">
+                    <span class="modal-title font-custom fw-bolder col-11 ms-4" id="exampleModalLabel"
+                        style="font-size: 18px;">إضافة مستودع</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="ms-5 me-5">
+                        <a class="nav-text-user nav-link  fw-bold col-7" style="margin-left: 20%;margin-right: 20%;"
+                            href="#">
+                            <div class="repository-item">
+                                <img src="img/defult-user.png" class="card-img-top mt-2  rounded-3 img-repository"
+                                    alt="...">
+                                <div
+                                    class="text-center d-flex flex-column align-items-center pt-5 img-repository-change">
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="input-group mb-3 me-5 mb-3 mt-3">
+                            <span class="input-group-text border-0 input-text-custom" id="name-repository">
+                                <i class="fa fa-home" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control border-1 input-text-custom fs-12"
+                                id="name-repository_ic" aria-describedby="name-repository_ic"
+                                placeholder="الإسم المستودع">
+                        </div>
+                        <div class="input-group row row-cols-3 mb-3 mb-3 mt-3 ms-1 me-1">
+                            <input type="text" readonly
+                                class="form-control input-text-custom  border-1 fs-12 font-custom"
+                                id="inputCuntry-repository" value="السعودية">
+                            <select id="inputCity-repository"
+                                class="form-select border-1 input-text-custom fs-12 col-5 ms-2 me-2">
+                                <option selected>المدينة</option>
+                                <option>...</option>
+                            </select>
+                            <input type="text" class="form-control border-1 input-text-custom fs-12"
+                                id="inputZip-repository" placeholder="zip code">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3  mt-3">
+                            <textarea class="form-control  border-1 input-text-custom fs-12" id="address-repository"
+                                rows="3" placeholder="العنوان"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i
+                            class="fa fa-save me-2 ms-1" aria-hidden="true"></i>حفظ</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2"
+                        data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+
+<body>
+
+    <header class="navbar navbar-expand-lg sticky-top flex-md-nowrap p-0" style="background-color: #F3B80A;">
+        <div class="container-fluid ms-3" style=" background-image: url('img//nav_back.png');">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
+                <img src="img/nav-logo.png" alt="" width="100" height="50" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav px-3">
+                <li class="nav-item dropdown">
+                    <a class="nav-link mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true"
+                        style="color:#fff;">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-center" style="width: 300px;" data-bs-toggle="dropdown"
+                        aria-expanded="true">
+                        <div class="dropdown-header d-flex flex-column align-items-center">
+                            <div class="info text-center">
+                                <p class="fw-bold mb-0">الإشعارات</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-body">
+                            <a class="dropdown-item" href="#">
+                                <span class="fw-bold" style="color: green;font-size: 16px;"><i class="fa fa-send me-2"
+                                        aria-hidden="true"></i>تم التسليم</span>
+                                <p class="text-muted mt-3" style="font-size: 12px;">تم دفع المبلغ وهو 15 ريال في تاريخ
+                                </p>
+                                <p class="text-muted" style="font-size: 10px;"> 15-12-2021</p>
+                            </a>
+                            <hr class="dropdown-divider">
+                        </div>
+                        <div class="text-center">
+                            <a class="text-muted nav-link" style="font-size: 12px;" href="#">إظهار الكل</a>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-text-user nav-link  fw-bold" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        محمد بن زايد <img class="rounded-circle h-25 w-25"
+                            src="https://ui-avatars.com/api/?name=shareef">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-center" ata-bs-toggle="dropdown" aria-expanded="true">
+                        <div class="dropdown-header d-flex flex-column align-items-center">
+                            <div class="figure mb-3">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    <img class="img-profile rounded-circle" src="https://ui-avatars.com/api/?name=s">
+                                </span>
+                            </div>
+                            <div class="info text-center">
+                                <p class="fw-bold mb-0">محمد بين زايد</p>
+                                <p class="text-muted mb-3">mohammed@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-body" aria-labelledby="navbarDropdown">
+                            <a href="#" class="dropdown-item nav-link font-custom fs-12" data-bs-toggle="modal"
+                                data-bs-target="#edit-usermodal">
+                                <i class="fa fa-edit me-1 ms-1" aria-hidden="true"></i>
+                                <span> تعديل بيانات الشخصية</span>
+                            </a>
+                            <a href="#" class="dropdown-item nav-link font-custom fs-12" data-bs-toggle="modal"
+                                data-bs-target="#edit-user-contactmodal">
+                                <i class="fa fa-edit me-1 ms-1" aria-hidden="true"></i>
+                                <span> تعديل بيانات التواصل</span>
+                            </a>
+                            <a href="#" class="dropdown-item nav-link font-custom fs-12" data-bs-toggle="modal"
+                                data-bs-target="#edit-bank-modal">
+                                <i class="fa fa-edit me-1 ms-1" aria-hidden="true"></i>
+                                <span> تعديل بيانات الحساب التجاري</span>
+                            </a>
+                            <a href="#" class="dropdown-item nav-link font-custom fs-12" data-bs-toggle="modal"
+                                data-bs-target="#edit-password-modal">
+                                <i class="fa fa-edit me-1 ms-1" aria-hidden="true"></i>
+                                <span> تعديل كلمة المرور</span>
+                            </a>
+                            <a href="#" class="dropdown-item nav-link font-custom fs-12" data-bs-toggle="modal"
+                                data-bs-target="#logoutmodal">
+                                <i class="fa fa-key me-1 ms-1" aria-hidden="true"></i>
+                                <span>تسجيل خروج</span>
+                            </a>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="width: 5.4%;">
+                <div class="position-sticky pt-3 shadow-sm">
+                    <ul class=" nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <main class="col-md-10 ms-sm-auto col-lg-11 px-md-5 mt-3">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 mb-3 me-2 ms-2 mt-2 ps-3 pe-3 shadow-sm"
+            style="top: 11%;">
+            <nav class="" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">الصفحة الرئيسية</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">العنوان</li>
+                </ol>
+            </nav>
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="input-group mb-2">
+                    <button class="btn btn-outline-secondary border-0 btn-hover" type="button" id="searchAddon04"
+                        style="background-color: #F2F2F2;"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <input type="text" class="form-control border-0" id="inputGroupsearch"
+                        aria-describedby="searchAddon04" aria-label="search" placeholder="بحث"
+                        style="background-color: #F2F2F2;">
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 mb-5 ms-1 me-1" style="max-height: 50%;">
+            <div class="table-responsive col-auto w-100">
+                <table class="table table-bordered text-center ">
+                    <thead class="fw-bold fs-14 font-custom" style="background-color: #F2F2F2;">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">البلغ السابق</th>
+                            <th scope="col">لك مبلغ </th>
+                            <th scope="col">عليك مبلغ</th>
+                            <th scope="col">إجمالي المستحق</th>
+                            <th scope="col">إلى تاريخ/من تاريخ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                         <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                         <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                        <tr class="fw-bold fs-12 font-custom">
+                            <th scope="row">1</th>
+                            <td>20</td>
+                            <td>25</td>
+                            <td>50</td>
+                            <td>45</td>
+                            <td>2020-1-2/2020-2-2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="footer py-4 mt-auto position-relative h-100 " style="background-color: #F3B80A; margin-top: 11%;">
+        <div class="position-absolute bottom-0 start-0 ms-5 mb-3">
+            <span class="text-white fw-bold">جميع الحقوق محفوظة</span>
+        </div>
+        <div class="position-absolute bottom-0 end-0 me-5 mb-3">
+            <span class="text-white fw-bold">2021</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
