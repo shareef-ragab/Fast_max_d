@@ -14,7 +14,7 @@
     <link href="css/dashboard.css" rel="stylesheet">
     <title>Fast max</title>
 
-    <!-- modal -->
+    <!-- modal logut-->
     <div class="modal fade" id="logoutmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -29,12 +29,46 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2">تسجيل الخروج</button>
-                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2" data-bs-dismiss="modal">إغلاق</button>
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i class="fa fa-key me-2 ms-1" aria-hidden="true"></i>تسجيل الخروج</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2" data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- modal edit user-->
+    <div class="modal fade" id="edit-usermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center col-11 border-bottom-0">
+                    <span class="modal-title font-custom fw-bolder col-11 ms-4" id="exampleModalLabel" style="font-size: 18px;">بيانات المستخدم</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="ms-5 me-5">
+                        <a class="nav-text-user nav-link  fw-bold col-9" style="margin-left: 40%;margin-right: 40%;" href="#">
+                            <img class="rounded-circle h-25 w-25" src="https://ui-avatars.com/api/?name=shareef">
+                        </a>
+                        <div class="mb-2 input-group mb-3 mt-3">
+                            <span class="col-1 input-group-text border-0 input-text-custom"><i class="fa fa-user fs-12" aria-hidden="true"></i></span>
+                            <input name="f_name" type="text" class="form-control border-0 input-text-custom me-2 fs-12" aria-label="First name" placeholder="الإسم الأول">
+                            <span class="col-1 input-group-text border-0 input-text-custom "><i class="fa fa-user fs-12" aria-hidden="true"></i></span>
+                            <input name="l_name" type="text" class="form-control border-0  input-text-custom fs-12" aria-label="Last name" placeholder="الإسم الأخير">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3">
+                            <span class="input-group-text border-0 input-text-custom" id="datebirth_ic"><i class="fa fa-calendar-times-o" aria-hidden="true"></i></span>
+                            <input type="date" class="form-control border-0 input-text-custom fs-12" id="datebirth" aria-describedby="datebirth_ic ">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2 ">  <i class="fa fa-save me-2 ms-1 " aria-hidden="true "></i>حفظ</button>
+                    <button type="button " class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2 " data-bs-dismiss="modal "><i class="fa fa-close me-2 ms-1 " aria-hidden="true "></i>إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </head>
 
 <body>
@@ -42,7 +76,7 @@
     <header class="navbar navbar-expand-lg sticky-top flex-md-nowrap p-0" style="background-color: #F3B80A; ">
         <div class="container-fluid ms-3" style=" background-image: url('img//nav_back.png');">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 " href="# ">
-                <img src="img/nav-logo.png" alt=" " width="100 " height="50 " class="d-inline-block align-top ">
+                <img src="img/nav-logo.png " alt=" " width="100 " height="50 " class="d-inline-block align-top ">
             </a>
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +92,7 @@
                                 <p class="fw-bold mb-0 ">الإشعارات</p>
                             </div>
                         </div>
-                        <div class="dropdown-body">
+                        <div class="dropdown-body ">
                             <a class="dropdown-item " href="# ">
                                 <span class="fw-bold " style="color: green;font-size: 16px; "><i
                                         class="fa fa-send me-2 " aria-hidden="true "></i>تم التسليم</span>
@@ -69,7 +103,7 @@
                             <hr class="dropdown-divider ">
                         </div>
                         <div class="text-center ">
-                            <a class="text-muted nav-link" style="font-size: 12px; " href="# ">إظهار الكل</a>
+                            <a class="text-muted nav-link " style="font-size: 12px; " href="# ">إظهار الكل</a>
                         </div>
                     </ul>
                 </li>
@@ -91,14 +125,14 @@
                             </div>
                         </div>
                         <div class="dropdown-body " aria-labelledby="navbarDropdown ">
-                            <ul class="navbar-nav ">
-                                <li class="nav-item ">
-                                    <a href="# " class="nav-link font-custom " style="font-size: 12px " data-bs-toggle="modal" data-bs-target="#logoutmodal">
-                                        <i class="fa fa-key me-1 ms-1 " aria-hidden="true "></i>
-                                        <span>تسجيل خروج</span>
-                                    </a>
-                                </li>
-                            </ul>
+                            <a href="#" class="dropdown-item nav-link font-custom fs-12" data-bs-toggle="modal" data-bs-target="#edit-usermodal">
+                                <i class="fa fa-edit me-1 ms-1 " aria-hidden="true "></i>
+                                <span>تعديل بيانات</span>
+                            </a>
+                            <a href="#" class="dropdown-item nav-link font-custom fs-12" data-bs-toggle="modal" data-bs-target="#logoutmodal">
+                                <i class="fa fa-key me-1 ms-1 " aria-hidden="true "></i>
+                                <span>تسجيل خروج</span>
+                            </a>
                         </div>
                     </ul>
                 </li>
@@ -129,331 +163,331 @@
                 </ol>
             </nav>
             <div class="btn-toolbar mb-2 mb-md-0 ">
-                <div class="input-group mb-2">
-                    <button class="btn btn-outline-secondary border-0" type="button" id="searchAddon04" style="background-color: #F2F2F2;"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    <input type="text" class="form-control border-0" id="inputGroupsearch" aria-describedby="searchAddon04" aria-label="search" placeholder="بحث" style="background-color: #F2F2F2;">
+                <div class="input-group mb-2 ">
+                    <button class="btn btn-outline-secondary border-0 " type="button " id="searchAddon04 " style="background-color: #F2F2F2; "><i class="fa fa-search " aria-hidden="true "></i></button>
+                    <input type="text " class="form-control border-0 " id="inputGroupsearch " aria-describedby="searchAddon04 " aria-label="search " placeholder="بحث " style="background-color: #F2F2F2; ">
                 </div>
             </div>
         </div>
-        <div class="row row-cols-5 mb-5 ms-2" style="max-height: 50%;">
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+        <div class="row row-cols-5 mb-5 ms-2 " style="max-height: 50%; ">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-2 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-2 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
-            <div class="card mt-2 mb-3 ms-3 me-3" style="width: 12rem;">
-                <img src="img/defult-user.png" class="card-img-top mt-2 " alt="...">
+            <div class="card mt-2 mb-3 ms-3 me-3 " style="width: 12rem; ">
+                <img src="img/defult-user.png " class="card-img-top mt-2 " alt="... ">
                 <div class="card-body ">
-                    <div class="row row-cols-2">
-                        <span class="card-title col-10 text-start title-custom mt-2" style="font-size: 12px;">المستودع</span>
-                        <ul class="navbar-nav col-1">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button " data-bs-toggle="dropdown" aria-expanded="true" style="color:#fff; ">
-                                    <i class="fa fa-ellipsis-v " aria-hidden="true" style="font-size: 14px;color:#989898;"></i>
+                    <div class="row row-cols-2 ">
+                        <span class="card-title col-10 text-start title-custom mt-2 " style="font-size: 12px; ">المستودع</span>
+                        <ul class="navbar-nav col-1 ">
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link " href="# " role="button " data-bs-toggle="dropdown " aria-expanded="true " style="color:#fff; ">
+                                    <i class="fa fa-ellipsis-v " aria-hidden="true " style="font-size: 14px;color:#989898; "></i>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 150px; " data-bs-toggle="dropdown" aria-expanded="true ">
-                                    <div class="dropdown-header d-flex flex-column align-items-center">
+                                <ul class="dropdown-menu " style="width: 150px; " data-bs-toggle="dropdown " aria-expanded="true ">
+                                    <div class="dropdown-header d-flex flex-column align-items-center ">
                                         <div class="info text-center ">
-                                            <p class="fw-bold mb-0 " style="font-size: 12px;">خيارات</p>
+                                            <p class="fw-bold mb-0 " style="font-size: 12px; ">خيارات</p>
                                         </div>
                                     </div>
-                                    <div class="dropdown-body">
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-trash me-2 ms-1" aria-hidden="true"></i>حذف
+                                    <div class="dropdown-body ">
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-trash me-2 ms-1 " aria-hidden="true "></i>حذف
                                         </a>
-                                        <a class="dropdown-item font-custom" href="# " style="font-size: 11px;">
-                                            <i class="fa fa-edit me-2 ms-1" aria-hidden="true"></i>تعديل
+                                        <a class="dropdown-item font-custom " href="# " style="font-size: 11px; ">
+                                            <i class="fa fa-edit me-2 ms-1 " aria-hidden="true "></i>تعديل
                                         </a>
                                     </div>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <p class="card-text text-start font-custom" style="font-size: 10px; ">العنوان</p>
-                    <p class="card-text text-start font-custom" style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px; ">العنوان</p>
+                    <p class="card-text text-start font-custom " style="font-size: 10px;margin-top:-8% ; ">محمد بن زايد</p>
                 </div>
             </div>
         </div>
@@ -472,7 +506,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js " integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG " crossorigin="anonymous "></script>
 
 </body>
-
-</html>
 
 </html>
