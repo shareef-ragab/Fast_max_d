@@ -48,7 +48,8 @@ a:hover,
 .nav-item-li:hover,
 .item-man:hover,
 .modal-btn-done:hover,
-.modal-btn-close:hover {
+.modal-btn-close:hover,
+.btn-hover:hover {
     color: #C49035;
 }
 
@@ -178,4 +179,31 @@ a:hover,
 }
 .edit-user-item:hover{
     background-color: #C49035;
+}
+
+a:active,
+.nav-link:active,
+.nav-text-user:active,
+.nav-text:active,
+.nav-item-li:active,
+.item-man:active,
+.modal-btn-done:active,
+.modal-btn-close:active,
+.dropdown-item:active {
+    background-color: #F3B80A;
+}
+
+a{
+    text-decoration: none;
+    color:#F3B80A;
+}
+
+.bill-item{
+    background-color: #C2C2C2;
+    color:#FFFFFF;
+}
+
+.bill-item:hover,.bill-item:active{
+    background-color: #F3B80A;
+    color:#FFFFFF;
 }
