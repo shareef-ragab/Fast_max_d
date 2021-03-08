@@ -200,16 +200,6 @@
                 </div>
                 <div class="modal-body">
                     <form class="ms-5 me-5">
-                        <a class="nav-text-user nav-link  fw-bold col-9" style="margin-left: 40%;margin-right: 40%;"
-                            href="#">
-                            <div class="profile-item">
-                                <img class="rounded-circle h-25 w-25 img-profile"
-                                    src="https://ui-avatars.com/api/?name=shareef">
-                                <div class="text-center d-flex flex-column align-items-center pt-5 img-profile-change">
-                                    <i class="fa fa-camera" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
                         <div class="input-group mb-3 me-5 mb-3">
                             <span class="input-group-text border-0 input-text-custom" id="number_account">
                                 <i class="fa fa-bank" aria-hidden="true"></i></span>
@@ -221,6 +211,60 @@
                                <i class="fa fa-bank" aria-hidden="true"></i></span>
                             <input type="text" class="form-control border-0 input-text-custom fs-12" id="Number_IBN"
                                 aria-describedby="Number_IBN_ic" placeholder="Number IBN">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn border-0 modal-btn-done ps-3 pe-3 pt-2 pb-2"> <i
+                            class="fa fa-save me-2 ms-1" aria-hidden="true"></i>حفظ</button>
+                    <button type="button" class="btn border-0 modal-btn-close ps-3 pe-3 pt-2 pb-2"
+                        data-bs-dismiss="modal"><i class="fa fa-close me-2 ms-1" aria-hidden="true"></i>إغلاق</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal add repository-->
+    <div class="modal fade" id="add-repository-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center col-11 border-bottom-0">
+                    <span class="modal-title font-custom fw-bolder col-11 ms-4" id="exampleModalLabel"
+                        style="font-size: 18px;">إضافة مستودع</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="ms-5 me-5">
+                        <a class="nav-text-user nav-link  fw-bold col-7" style="margin-left: 20%;margin-right: 20%;"
+                            href="#">
+                            <div class="repository-item">
+                                <img src="img/defult-user.png" class="card-img-top mt-2  rounded-3 img-repository" alt="...">
+                                <div class="text-center d-flex flex-column align-items-center pt-5 img-repository-change">
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="input-group mb-3 me-5 mb-3 mt-3">
+                            <span class="input-group-text border-0 input-text-custom" id="name-repository">
+                                <i class="fa fa-home" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control border-1 input-text-custom fs-12" id="name-repository_ic"
+                                aria-describedby="name-repository_ic" placeholder="الإسم المستودع">
+                        </div>
+                        <div class="input-group row row-cols-3 mb-3 mb-3 mt-3 ms-1 me-1">
+                            <input type="text" readonly
+                                class="form-control input-text-custom  border-1 fs-12 font-custom" id="inputCuntry-repository"
+                                value="السعودية">
+                            <select id="inputCity-repository" class="form-select border-1 input-text-custom fs-12 col-5 ms-2 me-2">
+                                <option selected>المدينة</option>
+                                <option>...</option>
+                            </select>
+                            <input type="text" class="form-control border-1 input-text-custom fs-12" id="inputZip-repository"
+                                placeholder="zip code">
+                        </div>
+                        <div class="input-group mb-3 me-5 mb-3  mt-3">
+                            <textarea class="form-control  border-1 input-text-custom fs-12"
+                                id="address-repository" rows="3" placeholder="العنوان"></textarea>
                         </div>
                     </form>
                 </div>
@@ -735,7 +779,7 @@
         </div>
     </main>
     <button onclick="topFunction()" id="myBtn" title="add" class="rounded-circle pt-2 pb-2 ps-3 pe-3"
-        style="display: block;"><i class="fa fa-plus" aria-hidden="true"></i></button>
+    data-bs-toggle="modal" data-bs-target="#add-repository-modal"style="display: block;"><i class="fa fa-plus" aria-hidden="true"></i></button>
     <footer class="footer py-4 position-relative h-100 fixed-bottom"
         style="background-color: #F3B80A; margin-top: 11%;">
         <div class="position-absolute bottom-0 start-0 ms-5 mb-3">

@@ -110,6 +110,18 @@ a:hover,
     font-size: 12px;
 }
 
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
 .img-profile{
     opacity: 1;
     display: block;
@@ -133,4 +145,37 @@ a:hover,
   
 .profile-item:hover .img-profile-change {
     opacity: 1;
+}
+
+.img-repository{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.img-repository-change {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-600%,-180%);
+  -ms-transform: translate(-600%,-180%);
+  text-align: center;
+}
+
+.repository-item:hover .img-repository {
+    opacity: 0.3;
+  }
+  
+.repository-item:hover .img-repository-change {
+    opacity: 1;
+}
+.edit-user-item{
+    background-color: #b7b7b7;
+    width: 2rem;
+    height: 2rem;
+}
+.edit-user-item:hover{
+    background-color: #C49035;
 }
