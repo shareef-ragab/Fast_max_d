@@ -12,24 +12,44 @@
 
 #barTracking li:first-child:after {
     content: '';
-    width: 38.5%;
+    width: 39.8%;
     height: 10px;
-    background: #878788;
+    background: #919191;
     position: absolute;
-    transform: translate(15%,-300%);
+    transform: translate(-3%,-300%);
     z-index: 0;
 }
 
 #barTracking li:last-child:after {
     content: '';
-    width: 39%;
+    width: 40%;
     height: 10px;
-    background: #878788;
+    background: #919191;
     position: absolute;
-    transform: translate(110%,-300%);
+    transform: translate(105%,-300%);
     z-index: 0;
 }
 
 #barTracking li.active:after {
-    background: #F3B80A
+    background: #F3B80A;
 }
+
+#barTracking li.Failure:after {
+    background: #FF0404;
+}
+
+.step.Failure .img-tracking {
+    background: #FF0404;
+}
+.status-done{
+    color: #F3B80A;
+}
+
+.status-Underway{
+    color: #919191;
+}
+
+.status-Failure{
+    color: #FF0404;
+}
+
