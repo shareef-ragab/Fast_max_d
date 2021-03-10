@@ -53,3 +53,19 @@
     color: #FF0404;
 }
 
+.card-details{
+    width: 18rem;
+     margin-top: -4%;
+      z-index: -1;
+}
+
+.item-drive.active{
+    background: #F3B80A;
+    color:#fff;
+}
+.item-drive{
+    background: #E4E4E4;
+    color:#919191;
+    width: 35px;
+    height: 35px;
+}
