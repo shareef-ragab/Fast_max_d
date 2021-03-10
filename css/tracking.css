@@ -1,0 +1,46 @@
+.step{
+    width: 50px;
+    height: 50px;
+    background: #919191;
+}
+
+.step.active {
+    background: #F3B80A;
+}
+
+#barTracking>li:first-child:after {
+    content: '';
+    width: 130%;
+    height: 2px;
+    background: #878788;
+    position: absolute;
+    left: 20%;
+    right:0%;
+    top: 35%;
+    z-index: 10;
+}
+
+.bs4-order-tracking li:after {
+    content: '';
+    width: 130%;
+    height: 2px;
+    background: #878788;
+    position: absolute;
+    left: 20%;
+    right:0%;
+    top: 35%;
+    z-index: -1;
+}
+
+.bs4-order-tracking li:first-child:after {
+    right: 0%
+}
+
+.bs4-order-tracking li:last-child:after {
+    right: 0% !important;
+    width: 0% !important
+}
+
+.bs4-order-tracking li.active:after {
+    background: #F3B80A
+}
